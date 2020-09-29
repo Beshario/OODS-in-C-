@@ -1,0 +1,3 @@
+/home/asp/Documents/OODS-in-C-/VTK_lessons/4/build/CMakeFiles/rebuild_cache.dir
+/home/asp/Documents/OODS-in-C-/VTK_lessons/4/build/CMakeFiles/edit_cache.dir
+/home/asp/Documents/OODS-in-C-/VTK_lessons/4/build/CMakeFiles/TriangleLines.dir
