@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
   line0->GetPointIds()->SetId ( 1,1 );
 
   vtkSmartPointer<vtkLine> line1 = vtkSmartPointer<vtkLine>::New();
-  //assigning point 1 and 2 as a first and secon point to line respectively.
-  line1->GetPointIds()->SetId ( 0,1 );
-  line1->GetPointIds()->SetId ( 1,2 );
+  //assigning point 1 and 2 as a first and secons point to line respectively.
+  line1->GetPointIds()->SetId ( 0,1 ); //first point in line is the point no1 (2 in array)
+  line1->GetPointIds()->SetId ( 1,2 );//second point in line is the point no2 (3 in array)
 
   vtkSmartPointer<vtkLine> line2 = vtkSmartPointer<vtkLine>::New();
   line2->GetPointIds()->SetId ( 0,2 );
