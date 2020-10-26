@@ -49,7 +49,7 @@ StringVec loadBookStrings(unsigned int min_word_length) {
   // or punctuation in the file cannot be represented as an ordinary "char" in C++.
   // In practice, parsing text robustly can be much more complicated than this,
   // but it's a topic for another course.)
-  
+
   // Open the input file for reading with an ifstream, input file stream object.
   // If it can't be opened, throw an exception.
   std::ifstream instream(filename);
@@ -259,7 +259,7 @@ int longestPalindromeLength(const std::string& str, int leftLimit, int rightLimi
     // above already.
     throw std::runtime_error("rightLimit negative, but it's not the base case");
   }
-  
+
   // Apart from that, in the following code, the std::string::at() function
   // will throw an exception if an index is out of bounds.
 
@@ -305,7 +305,7 @@ int longestPalindromeLength(const std::string& str, int leftLimit, int rightLimi
     // In the base case situation when the indices cross,
     // we force this value to be 0 instead of negative.
     if (middleMaxLength < 0) middleMaxLength = 0;
-    
+
     // If the middle subproblem result equals the entire length
     // of the middle substring, then the middle substring is a palindrome.
     // So, since the first and last outer characters match each other,
@@ -409,4 +409,3 @@ std::string reconstructPalindrome(const LengthMemo& memo, const std::string& str
     return "";
   }
 }
-

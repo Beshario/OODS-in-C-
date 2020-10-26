@@ -57,6 +57,15 @@ StringIntMap makeWordCounts(const StringVec& words) {
   // EXERCISE 1 WORKSPACE: YOUR CODE HERE
   // =================================================
 
+  for (auto word : words){
+    StringIntMap::iterator it = wordcount_map.find(word);
+    if (it == wordcount_map.end()){
+      wordcount_map.insert({word, 1});
+    }
+    else {
+      it->second++;
+    }
+  }
   return wordcount_map;
 }
 
@@ -100,8 +109,14 @@ int lookupWithFallback(const StringIntMap& wordcount_map, const std::string& key
   // =================================================
   // EXERCISE 2 WORKSPACE: YOUR CODE HERE
   // =================================================
+  StringIntMap::const_iterator it = wordcount_map.find(key);
+  if (it == wordcount_map.end()){
+    return fallbackVal;
+  }
+  else {
+    return it->second;
+  }
 
-  return -1337; // Change this!
 }
 
 
@@ -214,7 +229,7 @@ int memoizedLongestPalindromeLength(LengthMemo& memo, const std::string& str, in
     // new in this case. So, we also won't store anything new in the table in
     // this case, only return what's already stored at this key in the map.
 
-    return -1337; // Hint: You need to change this!
+    return memo[pairKey]; // Hint: You need to change this!
     // ====================================================================
 
   }
@@ -321,7 +336,6 @@ int memoizedLongestPalindromeLength(LengthMemo& memo, const std::string& str, in
   // =======================================================================
   // EXERCISE 3 - PART B - YOUR CODE HERE!
   //
-  return -1337; // Hint: You need to change this!
+  return greaterResult; // Hint: You need to change this!
   // =======================================================================
 }
-
